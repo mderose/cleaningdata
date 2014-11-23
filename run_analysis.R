@@ -54,4 +54,5 @@ mergemeandslb <- merge(mergemeands, actlabels,by="act_id" )
 #4Appropriately labels the data set with descriptive variable names.
 #This point is already resolved in step 1 cause it associates column names to original datasets
 outdataset <- aggregate(mergemeandslb[,2:80], by=list(Act_id=mergemeandslb$act_id,Act_label=mergemeandslb$act_label,Subject_id=mergemeandslb$subject_id), FUN=mean)
+setwd("..")
 write.table(outdataset, 'outputdataset.txt', row.name=FALSE)
