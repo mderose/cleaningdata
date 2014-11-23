@@ -4,6 +4,7 @@
 #The analysis generates a tidy dataset  from the original training and test datasets
 
 #Read the featuring label
+setwd("cleaningdata")
 featlabel <- read.csv("UCIHARDataset//features.txt", sep=" ",header=FALSE)
 names(featlabel) <- c("featid","flabel")
 
